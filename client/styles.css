@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Signika Negative";
+}
+#root{
+    background-color: #000;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+main{
+    background-color: #000;
+    padding:2rem;
+    height: 80vh;
+    border-radius: 10px;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 50px 30px rgba(125,125,125,0.2);
+}
+h2, h3{
+    text-align: center;
+    color:#fff;
+    max-width:70vw;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    animation: 4s infinite ease-in-out colorsText;
+    font-size: 1.7rem;
+}
+button{
+    cursor:pointer;
+    font-size: 1.4rem;
+    font-style: italic;
+    background-color: #000;
+    height: 15vw;
+    width: 15vw;
+    border: none;
+    border-radius: 50%;
+    font-weight: bold;
+    animation: 4s infinite ease-in-out colors;
+}
+
+@keyframes colors {
+    0%{
+        color: yellow;
+        box-shadow: 0px 0px 70px 30px yellow;
+    }
+    35% {
+        color: blue;
+        box-shadow: 0px 0px 70px 30px blue;
+    }
+    64%{
+        color: red;
+        box-shadow: 0px 0px 70px 30px red;
+    }
+    100%{
+        color: yellow;
+        box-shadow: 0px 0px 70px 30px yellow;
+    }
+}
+
+@keyframes colors2 {
+    0%{
+        color: yellow;
+        box-shadow: 0px 0px 30px 10px yellow;
+    }
+    35% {
+        color: blue;
+        box-shadow: 0px 0px 30px 10px blue;
+    }
+    64%{
+        color: red;
+        box-shadow: 0px 0px 30px 10px red;
+    }
+    100%{
+        color: yellow;
+        box-shadow: 0px 0px 30px 10px yellow;
+    }
+}
+
+@keyframes colorsText {
+    0%{
+        color: yellow;
+    }
+    35%{
+        color: blue;
+    }
+    75%{
+        color: red;
+    }
+    100%{
+        color: yellow;
+    }
+}
+
+@media (max-width:430px){
+    main{
+        width:50%;
+        height:70%;
+        box-shadow: 0px 0px 20px 10px rgba(125,125,125,0.2);
+        justify-content: space-around;
+    }
+    h2{
+        font-size: 1.7rem;
+    }
+    h3{
+        font-size: 1.4rem;
+    }
+    button{
+        width:50vw;
+        height:50vw;
+        animation: 4s infinite ease-in-out colors2;
+    }
+}
